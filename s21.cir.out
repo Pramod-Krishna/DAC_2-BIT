@@ -4,16 +4,17 @@
 v2  net-_r1-pad1_ gnd 3.3v
 v3  d0 gnd pulse(0 1.8 0 5p 5p 1n 2n)
 v4  d1 gnd pulse(0 1.8 0 5p 5p 2n 4n)
-r3  net-_r2-pad2_ net-_r3-pad2_ 5k
-r2  net-_r1-pad2_ net-_r2-pad2_ 5k
-r1  net-_r1-pad1_ net-_r1-pad2_ 5k
+r3  net-_r2-pad2_ net-_r3-pad2_ 10k
+r2  net-_r1-pad2_ net-_r2-pad2_ 10k
+r1  net-_r1-pad1_ net-_r1-pad2_ 10k
 * u2  d1 plot_v1
 * u1  d0 plot_v1
 * u3  out1 plot_v1
 x2 d0 net-_r1-pad2_ net-_r1-pad1_ net-_x2-pad4_ r22
 x1 d0 net-_r3-pad2_ net-_r2-pad2_ net-_x1-pad4_ r22
 x3 d1 net-_x1-pad4_ net-_x2-pad4_ out1 r22
-r4  net-_r3-pad2_ gnd 5k
+r4  net-_r3-pad2_ gnd 10k
+l1  out1 gnd 10mh
 .tran 20e-12 10e-09 0e-09
 
 * Control Statements 

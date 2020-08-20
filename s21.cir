@@ -1,6 +1,6 @@
 * /home/pramod/eSim-Workspace/s21/s21.cir
 
-* EESchema Netlist Version 1.1 (Spice format) creation date: Tue Aug 11 16:21:13 2020
+* EESchema Netlist Version 1.1 (Spice format) creation date: Thu Aug 20 10:50:34 2020
 
 * To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
 * To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
@@ -9,15 +9,16 @@
 v2  Net-_R1-Pad1_ GND 3.3v		
 v3  D0 GND pulse		
 v4  D1 GND pulse		
-R3  Net-_R2-Pad2_ Net-_R3-Pad2_ 5k		
-R2  Net-_R1-Pad2_ Net-_R2-Pad2_ 5k		
-R1  Net-_R1-Pad1_ Net-_R1-Pad2_ 5k		
+R3  Net-_R2-Pad2_ Net-_R3-Pad2_ 10k		
+R2  Net-_R1-Pad2_ Net-_R2-Pad2_ 10k		
+R1  Net-_R1-Pad1_ Net-_R1-Pad2_ 10k		
 U2  D1 plot_v1		
 U1  D0 plot_v1		
 U3  out1 plot_v1		
 X2  D0 Net-_R1-Pad2_ Net-_R1-Pad1_ Net-_X2-Pad4_ rcb		
 X1  D0 Net-_R3-Pad2_ Net-_R2-Pad2_ Net-_X1-Pad4_ rcb		
 X3  D1 Net-_X1-Pad4_ Net-_X2-Pad4_ out1 rcb		
-R4  Net-_R3-Pad2_ GND 5k		
+R4  Net-_R3-Pad2_ GND 10k		
+L1  out1 GND 10mH		
 
 .end
